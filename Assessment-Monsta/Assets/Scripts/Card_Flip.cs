@@ -17,7 +17,6 @@ public class Card_Flip : MonoBehaviour, IPointerDownHandler
         isFaceUp = false;
         enabledCoroutine = true;
 
-        //StartCoroutine(ShuffleCard());
     }
 
 
@@ -38,17 +37,10 @@ public class Card_Flip : MonoBehaviour, IPointerDownHandler
 
 
     //IEnumerator
-    public IEnumerator ShuffleCard()
-    {
-        yield return new WaitForSeconds(0.5f);
-
-
-    }
-
     public IEnumerator RotateCard()
     {
 
-        if(isFaceUp == false)
+        if (isFaceUp == false)
         {
             for(float i = 0f; i <= 180f; i+=10f)
             {
@@ -78,7 +70,5 @@ public class Card_Flip : MonoBehaviour, IPointerDownHandler
             }
         }
 
-        //enabledCoroutine = true;
-        //isFaceUp = false;
     }
 }
